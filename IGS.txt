@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Indore Grievance System">
+    <meta name="author" content="Palash Sharma">
+    <meta name="keywords" content="indore,grievance,complaint,system,indore grievance system,palash, palash sharma, palash's project,">
+
+    <!-- Title Page-->
+    <title>Project : Indore Grievance System</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Indore Grievance System</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="submit_data.php">
+                        <div class="form-row m-b-55">
+                            <div class="name">Complaint</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="comp_date" value='<?php echo date('M d Y');?>' disabled="disabled">
+                                            <label class="label--desc">Date of Complaint mm dd yyyy </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                                <select name="subject">
+                                                    <option disabled="disabled" selected="selected">Complaint Department</option>
+                                                    <option value="palashusharma555@gmail.com">Traffic Head</option>
+                                                    <option value="Prateekmohdiya4162@gmail.com">Water Resources Head</option>
+                                                    <option value="palashusharma555@gmail.com">Sewage Head</option>
+                                                </select>
+                                                <div class="select-dropdown"></div>
+                                            </div>
+                                        </div>
+                    <!--                    <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="mail_to">
+                                            <label class="label--desc">Complaint to </label>
+                                        </div>
+                                        -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name">Name</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="first_name" required>
+                                            <label class="label--desc">first name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="last_name" required>
+                                            <label class="label--desc">last name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name">Phone</div>
+                            <div class="value">
+                                <div class="row row-refine">
+                                    <div class="col-3">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="area_code" value="+91">
+                                            <label class="label--desc">Country Code</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="phone" pattern="[789][0-9]{9}" required>
+                                            <label class="label--desc">Phone Number</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Email</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="email" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Address</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="address" placeholder="Line 1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name"></div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="city" required>
+                                            <label class="label--desc">city</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="state" value="Madhya Pradesh" required>
+                                            <label class="label--desc">State</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name">Incident Details</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-6" type="date" name="ins_date" required>
+                                            <label class="label--desc">Date of Incident mm dd yyyy </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                                <select name="subject">
+                                                    <option disabled="disabled" selected="selected">Choose option</option>
+                                                    <option>Subject 1</option>
+                                                    <option>Subject 2</option>
+                                                    <option>Subject 3</option>
+                                                </select>
+                                                <div class="select-dropdown"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name"></div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="ins_address" placeholder="Line 1">
+                                    <label class="label--desc">Location of Incident</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name"></div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="ins_city" required>
+                                            <label class="label--desc">city of Incident</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="ins_state" value="Madhya Pradesh" required>
+                                            <label class="label--desc">State of Incident</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name"></div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea rows="2" cols="50" class="input--style-5" name="ins_details"></textarea>
+                                    <label class="label--desc">Complaint Details</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Desired Outcome</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea rows="4" cols="50" class="input--style-5" name="out_come"></textarea>
+                                    <label class="label--desc">Suggest the step that should be taken to avoid repeat of the problem.</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="form-row">
+                            <div class="name">Subject</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option>Subject 1</option>
+                                            <option>Subject 2</option>
+                                            <option>Subject 3</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Are you an existing customer?</label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-55">Yes
+                                    <input type="radio" checked="checked" name="exist">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">No
+                                    <input type="radio" name="exist">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        -->
+                        <div>
+                            <button class="btn btn--radius-2 btn--red" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
